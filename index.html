@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 魚類睡覺模型展示 | Leafish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --background-color: #f8fafc;
+            --text-color: #1e293b;
+            --border-radius: 16px;
+            --container-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .title a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .title a:hover {
+            opacity: 0.8;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .model-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--container-shadow);
+            margin-bottom: 2rem;
+        }
+
+        .model-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 寬高比 */
+            border-radius: calc(var(--border-radius) - 8px);
+            overflow: hidden;
+            background: #f1f5f9;
+        }
+
+        .model-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .info-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--container-shadow);
+        }
+
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .info-content {
+            color: #475569;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+
+        .info-link:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-item {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: calc(var(--border-radius) - 8px);
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-title {
+            font-weight: 500;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .model-container {
+                padding: 1rem;
+            }
+
+            .info-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                3D Leafish 睡覺模型展示
+                <a href="https://leafish.xyz" target="_blank" title="訪問 Leafish 的個人網站">🔗</a>
+            </h1>
+            <p class="subtitle">使用先進的 3D 掃描技術，為您呈現精確的魚類模型細節</p>
+        </header>
+
+        <div class="model-container">
+            <div class="model-wrapper">
+                <iframe 
+                    src="https://poly.cam/capture/7DC2AE59-CEB3-4D12-B9A4-39332714854F/embed" 
+                    title="魚類 3D 模型展示"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <section class="info-section">
+            <h2 class="info-title">關於此 3D 模型</h2>
+            <p class="info-content">
+                這個高精度的 3D 模型使用最新的掃描技術製作，完整呈現魚類的外觀特徵。
+                模型包含精細的表面細節，讓您能夠從各個角度觀察研究。
+                想了解更多關於這隻魚的故事和生活點滴，歡迎訪問她的個人網站。
+            </p>
+            
+            <a href="https://leafish.xyz" target="_blank" class="info-link">
+                訪問 Leafish 的個人網站 →
+            </a>
+
+            <div class="features">
+                <div class="feature-item">
+                    <h3 class="feature-title">高解析度</h3>
+                    <p>使用高精度掃描設備，捕捉細微的表面細節</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-title">360° 視角</h3>
+                    <p>支援全方位旋轉，讓您能夠從任何角度觀察</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="feature-title">互動體驗</h3>
+                    <p>支援縮放、旋轉等互動功能，提供更好的觀察體驗</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
